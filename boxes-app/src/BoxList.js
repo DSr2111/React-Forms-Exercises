@@ -12,4 +12,10 @@ function BoxList() {
   };
 
   const boxComponents = boxes.map((box) => <Box />);
+
+  return (
+    <div>
+      <NewBoxForm />
+    </div>
+  );
 }
