@@ -7,6 +7,7 @@ function TodoList() {
   const create = (newTodo) => {
     setTodos((todos) => [...todos, newTodo]);
   };
+
   const update = (id, updatedTask) => {
     setTodos((todos) =>
       todos.map((todo) =>
@@ -14,4 +15,18 @@ function TodoList() {
       )
     );
   };
+
+  const remove = (id) => {
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
+  };
+
+  const todoComponents = todos.map((todo) => (
+    <Todo
+      remove={remove}
+      key={todo.id}
+      id={todo.id}
+      task={todo.task}
+      update={update}
+    />
+  ));
 }
