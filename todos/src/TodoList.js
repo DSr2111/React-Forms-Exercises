@@ -29,4 +29,13 @@ function TodoList() {
       update={update}
     />
   ));
+
+  return (
+    <div>
+      <NewTodoForm createTodo={create} />
+      <ul>{todoComponents}</ul>
+    </div>
+  );
 }
+
+export default TodoList;
