@@ -7,4 +7,15 @@ function NewBoxForm({ createBox }) {
     width: "",
     backgroundColor: "",
   });
+
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+    setFormData((formData) => ({ ...formData, [name]: value }));
+  };
+
+  const gatherInput = (evt) => {
+    evt.preventDefault();
+    createBox({ ...formData, id: uuid() });
+    setFormData({ height: "", width: "", backgroundColor: "" });
+  };
 }
