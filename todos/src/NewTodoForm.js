@@ -30,3 +30,5 @@ function NewTodoForm({ createTodo }) {
     </div>
   );
 }
+
+export default NewTodoForm;
