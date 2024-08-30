@@ -43,3 +43,5 @@ function Todo({ task = "default todo", id = "1", remove, update }) {
 
   return jsx;
 }
+
+export default Todo;
